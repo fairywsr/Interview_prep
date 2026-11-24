@@ -1,4 +1,4 @@
-// loop m var i Variable ak hi hr iteration pi use hota hain is lia last value 3 hui to 3 times 3 print huwa
+// loop m var i (var function scope rakhta hain is lia 3,3,3)
 for (var i = 0; i < 3; i++) {
   setTimeout(() => {
     console.log(`${i}`);
@@ -11,3 +11,11 @@ for (let j = 0; j < 3; j++) {
     console.log(`${j}`);
   }, 100);
 }
+
+// scope in function
+let y = "global";
+function test() {
+  let y = "local";
+  console.log("without return", y);
+}
+test();
